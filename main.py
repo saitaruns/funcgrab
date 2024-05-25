@@ -20,7 +20,7 @@ class User(BaseModel):
 @app.middleware("http")
 async def authorize(request: Request, call_next):
     response = None
-    if request.url.path == '/functions' or request.url.path == '/functions/{function_name}':
+    if request.url.path.startswith('/functions'):
         try:
             token = request.headers.get("authorization").split(" ")[-1]
             user = auth.get_account_info(token)
