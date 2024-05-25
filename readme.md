@@ -18,10 +18,11 @@ Store the metadata of the functions from your python repo
 
 - Run the following command to create an python env:
   > python3 -m venv env
-- Create a firebase app enable email authentication
+- Create a firebase app, enable email authentication
 - Generate the private key under service accounts and add that to serviceAccountKey.json
 - Get the firebaseConfig from the admin sdk and replace the config in firebase.py file
-- Run the comman: fastapi dev main.py
+- Run the comman:
+  > fastapi dev main.py
 
 ## Usage
 
